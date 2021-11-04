@@ -6,13 +6,13 @@
     <mat-card *ngFor="let product of products" style="margin-top:10px;">
         <mat-card-header>
             <mat-card-title>
-                PRODUCT NAME? 
-                {{product}}
+                PRODUCT NAME???
+                {{product.name}}
                 <!-- {{product.name}} -->
             </mat-card-title>
             <mat-card-subtitle>
                 PRODUCT PRICE? 
-                <!-- {{product.price}} $/ {{product.quantity}} -->
+                {{product.price}}
             </mat-card-subtitle>
         </mat-card-header>
 
@@ -20,10 +20,10 @@
         <mat-card-content>
             <p>
                 PRODUCT DESCRIPTION? 
-                <!-- {{product.description}} -->
+                {{product.description}}
             </p>
             <!-- PRODUCT IMAGE?  -->
-            <!-- <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" /> -->
+            <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
         </mat-card-content>
 
         <mat-card-actions>
