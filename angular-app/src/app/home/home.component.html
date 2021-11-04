@@ -1,32 +1,25 @@
-<p>home works!</p>
+
 
 <div style="padding: 13px;">
+    <!-- if no products, spinner icon appears  -->
     <mat-spinner *ngIf="products.length === 0"></mat-spinner>
 
     <mat-card *ngFor="let product of products" style="margin-top:10px;">
         <mat-card-header>
-            <mat-card-title>
-                PRODUCT NAME???
+                <mat-card-title>
                 {{product.name}}
-                <!-- {{product.name}} -->
-            </mat-card-title>
+                </mat-card-title>
             <mat-card-subtitle>
-                PRODUCT PRICE? 
-                {{product.price}}
+              {{product.price}}
             </mat-card-subtitle>
         </mat-card-header>
-
-
         <mat-card-content>
-            <p>
-                PRODUCT DESCRIPTION? 
-                {{product.description}}
-            </p>
+            <p>{{product.description}}</p>
             <!-- PRODUCT IMAGE?  -->
-            <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
+            <img src="{{ product.imageUrl }}" alt= "product image" />
         </mat-card-content>
 
-        <mat-card-actions>
+    <mat-card-actions>
       <button mat-button> Buy product</button>
     </mat-card-actions>
     </mat-card>
